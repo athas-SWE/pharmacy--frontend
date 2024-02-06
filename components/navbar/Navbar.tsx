@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="navbar">
-      <div className="brand">Pet Store</div>
+      <div className="brand">Pharmacy</div>
       <div className="hamburger">
         <Menu onClick={toggleNavBar} />
       </div>
@@ -27,10 +27,10 @@ const Navbar: React.FC = () => {
             <Link to="/">Home</Link>
           </li>
           <li onClick={toggleNavBar}>
-            <Link to="/products">Products</Link>
+            <Link to="/products">Medical Drugs</Link>
           </li>
           <li onClick={toggleNavBar}>
-            <Link to="/products/add">Add Product</Link>
+            <Link to="/products/add">Add Medical Drugs</Link>
           </li>
         </ul>
       </div>
