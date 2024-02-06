@@ -1,13 +1,13 @@
 import React from "react";
 import "./delete-product.scss";
 
-import { IProduct } from "../../types/global.typing";
+import { IMedicalDrugs } from "../../types/global.typing";
 import { useNavigate, useParams } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
 import axios from "axios";
 import { baseUrl } from "../../constants/url.constant";
 
-const DeleteProduct = () => {
+const DeleteDrugs = () => {
   const redirect = useNavigate();
   const { id } = useParams();
 
@@ -47,4 +47,4 @@ const DeleteProduct = () => {
   );
 };
 
-export default DeleteProduct;
+export default DeleteDrugs;
