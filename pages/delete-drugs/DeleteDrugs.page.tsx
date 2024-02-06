@@ -16,19 +16,19 @@ const DeleteDrugs = () => {
       .delete(`${baseUrl}/${id}`)
       .then((resposne) =>
         redirect("/products", {
-          state: { message: "Product Deleted Successfully" },
+          state: { message: " Deleted Successfully" },
         })
       )
       .catch((error) => alert("Error"));
   };
 
   const handleBackBtnClick = () => {
-    redirect("/products");
+    redirect("/medicaldrugs");
   };
 
   return (
-    <div className="delete-product">
-      <h2>Delete Product</h2>
+    <div className="delete-drug">
+      <h2>Delete</h2>
       <h4>Are You Sure You want to delete this product?</h4>
 
       <div>
