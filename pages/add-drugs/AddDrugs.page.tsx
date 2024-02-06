@@ -8,8 +8,8 @@ import { baseUrl } from "../../constants/url.constant";
 
 const AddProduct: React.FC = () => {
   const [product, setProduct] = React.useState<Partial<IProduct>>({
-    title: "",
-    brand: "",
+    Name: "",
+    Drugs: "",
   });
   const redirect = useNavigate();
 
@@ -21,14 +21,14 @@ const AddProduct: React.FC = () => {
   };
 
   const handleSaveBtnClick = () => {
-    if (product.title === "" || product.brand === "") {
+    if (product.Name === "" || product.Drugs === "") {
       alert("Enter Values");
       return;
     }
 
     const data: Partial<IProduct> = {
-      brand: product.brand,
-      title: product.title,
+      Drugs: product.Drugs,
+      Name: product.Name,
     };
     axios
       .post(baseUrl, data)
@@ -49,18 +49,18 @@ const AddProduct: React.FC = () => {
       <h2>Add New Product</h2>
       <TextField
         autoComplete="off"
-        label="Brand"
+        label="Drugs"
         variant="outlined"
         name="brand"
-        value={product.brand}
+        value={product.Drugs}
         onChange={changeHandler}
       />
       <TextField
         autoComplete="off"
-        label="Title"
+        label="Name"
         variant="outlined"
         name="title"
-        value={product.title}
+        value={product.Name}
         onChange={changeHandler}
       />
       <div>
