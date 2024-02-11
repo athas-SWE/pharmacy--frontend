@@ -48,9 +48,9 @@ const Products: React.FC = () => {
 
   return (
     <div className="products">
-      <h1>Products List</h1>
-      {products.length === 0 ? (
-        <h1>No Products</h1>
+      <h1>Drugs List</h1>
+      {drugs.length === 0 ? (
+        <h1>No Drugs</h1>
       ) : (
         <div className="table-wrapper">
           <table>
