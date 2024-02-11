@@ -10,7 +10,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Products: React.FC = () => {
-  const [drugs, setProducts] = useState<IProduct[]>([]);
+  const [drugs, setDrugs] = useState<IProduct[]>([]);
   const location = useLocation();
   const redirect = useNavigate();
 
@@ -18,8 +18,8 @@ const Products: React.FC = () => {
 
   const fetchProductsList = async () => {
     try {
-      const response = await axios.get<IProduct[]>(baseUrl);
-      setProducts(response.data);
+      const response = await axios.get<IDrugs[]>(baseUrl);
+      setDrugs(response.data);
       if (location?.state) {
         Swal.fire({
           icon: "success",
