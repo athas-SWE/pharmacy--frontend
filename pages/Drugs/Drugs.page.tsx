@@ -39,11 +39,11 @@ const Products: React.FC = () => {
   //    console.log(products);
 
   const redirectToEditPage = (id: string) => {
-    redirect(`/products/edit/${id}`);
+    redirect(`/drugs/edit/${id}`);
   };
 
   const redirectToDeletePage = (id: string) => {
-    redirect(`/products/delete/${id}`);
+    redirect(`/drugs/delete/${id}`);
   };
 
   return (
