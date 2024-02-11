@@ -64,10 +64,10 @@ const Products: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              {products.map((product) => (
-                <tr key={product.id}>
-                  <td>{product.title}</td>
-                  <td>{product.brand}</td>
+              {drugs.map((drug) => (
+                <tr key={drug.id}>
+                  <td>{drug.title}</td>
+                  <td>{drug.brand}</td>
                   <td>{moment(product.createdAt).fromNow()}</td>
                   <td>{moment(product.updatedAt).fromNow()}</td>
                   <td>
