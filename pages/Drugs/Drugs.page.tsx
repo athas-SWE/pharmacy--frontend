@@ -75,14 +75,14 @@ const Products: React.FC = () => {
                       variant="outlined"
                       color="warning"
                       sx={{ mx: 3 }}
-                      onClick={() => redirectToEditPage(product.id)}
+                      onClick={() => redirectToEditPage(drug.id)}
                     >
                       <Edit />
                     </Button>
                     <Button
                       variant="outlined"
                       color="error"
-                      onClick={() => redirectToDeletePage(product.id)}
+                      onClick={() => redirectToDeletePage(drug.id)}
                     >
                       <Delete />
                     </Button>
