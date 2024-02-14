@@ -66,10 +66,10 @@ const Products: React.FC = () => {
             <tbody>
               {drugs.map((drug) => (
                 <tr key={drug.id}>
-                  <td>{drug.title}</td>
-                  <td>{drug.brand}</td>
-                  <td>{moment(product.createdAt).fromNow()}</td>
-                  <td>{moment(product.updatedAt).fromNow()}</td>
+                  <td>{drug.name}</td>
+                  <td>{drug.Drugs}</td>
+                  <td>{moment(drug.createdAt).fromNow()}</td>
+                  <td>{moment(drug.updatedAt).fromNow()}</td>
                   <td>
                     <Button
                       variant="outlined"
