@@ -9,7 +9,7 @@ import moment from "moment";
 import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const Products: React.FC = () => {
+const Drugs: React.FC = () => {
   const [drugs, setDrugs] = useState<IProduct[]>([]);
   const location = useLocation();
   const redirect = useNavigate();
