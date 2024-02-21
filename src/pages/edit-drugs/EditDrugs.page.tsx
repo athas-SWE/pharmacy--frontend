@@ -1,17 +1,19 @@
 import React from "react";
-import "./add-product.scss";
-import { TextField, Button } from "@mui/material";
 import { IProduct } from "../../types/global.typing";
+import "./edit-product.scss";
+import { useNavigate, useParams } from "react-router-dom";
+import { TextField, Button } from "@mui/material";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { baseUrl } from "../../constants/url.constant";
+import { baseUrl } from "../../../constants/url.constant";
 
-const AddProduct: React.FC = () => {
+const EditProduct: React.FC = () => {
   const [product, setProduct] = React.useState<Partial<IProduct>>({
     Name: "",
     Drugs: "",
   });
+
   const redirect = useNavigate();
+  const { id } = useParams();
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setProduct({
@@ -20,21 +22,29 @@ const AddProduct: React.FC = () => {
     });
   };
 
+  React.useEffect(() => {
+    axios.get<IProduct>(`${baseUrl}/${id}`).then((response) =>
+      setProduct({
+        Name: response.data.Name,
+        Drugs: response.data.Drugs,
+      })
+    );
+  }, []);
+
   const handleSaveBtnClick = () => {
     if (product.Name === "" || product.Drugs === "") {
       alert("Enter Values");
       return;
     }
-
     const data: Partial<IProduct> = {
       Drugs: product.Drugs,
       Name: product.Name,
     };
     axios
-      .post(baseUrl, data)
+      .put(`${baseUrl}/${id}`, data)
       .then((resposne) =>
         redirect("/products", {
-          state: { message: "Product Created Successfully" },
+          state: { message: "Product Updated Successfully" },
         })
       )
       .catch((error) => alert("Error"));
@@ -45,8 +55,8 @@ const AddProduct: React.FC = () => {
   };
 
   return (
-    <div className="add-product">
-      <h2>Add New Product</h2>
+    <div className="edit-product">
+      <h2>Edit Product</h2>
       <TextField
         autoComplete="off"
         label="Drugs"
@@ -79,4 +89,4 @@ const AddProduct: React.FC = () => {
   );
 };
 
-export default AddProduct;
+export default EditProduct;

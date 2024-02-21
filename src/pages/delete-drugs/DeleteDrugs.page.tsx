@@ -5,7 +5,7 @@ import { IMedicalDrugs } from "../../types/global.typing";
 import { useNavigate, useParams } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
 import axios from "axios";
-import { baseUrl } from "../../constants/url.constant";
+import { baseUrl } from "../../../constants/url.constant";
 
 const DeleteDrugs = () => {
   const redirect = useNavigate();
