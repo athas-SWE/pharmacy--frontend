@@ -10,7 +10,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Drugs: React.FC = () => {
-  const [drugs, setDrugs] = useState<IProduct[]>([]);
+  const [drugs, setDrugs] = useState<IDrugs[]>([]);
   const location = useLocation();
   const redirect = useNavigate();
 
