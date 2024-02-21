@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./products.scss";
 import axios from "axios";
 import { baseUrl } from "../../constants/url.constant";
-import { IProduct } from "../../types/global.typing";
+import { IDrugs } from "../../types/global.typing";
 import { Button } from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
 import moment from "moment";
