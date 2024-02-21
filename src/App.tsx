@@ -5,7 +5,7 @@ import AddProduct from "./pages/add-drugs/AddDrugs.page";
 import DeleteProduct from "./pages/delete-drugs/DeleteDrugs.page";
 import EditProduct from "./pages/edit-drugs/EditDrugs.page";
 import Home from "./pages/home/Home.page";
-import Products from "./pages/products/Products.page";
+import Products from "./pages/Drugs/Drugs.page";
 
 const App: React.FC = () => {
   return (
