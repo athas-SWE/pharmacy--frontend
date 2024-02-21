@@ -4,7 +4,7 @@ import "./edit-product.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
 import axios from "axios";
-import { baseUrl } from "../../../constants/url.constant";
+import { baseUrl } from "../../constants/url.constant";
 
 const EditProduct: React.FC = () => {
   const [product, setProduct] = React.useState<Partial<IProduct>>({
