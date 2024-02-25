@@ -16,7 +16,7 @@ const EditProduct: React.FC = () => {
   const { id } = useParams();
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setProduct({
+    setDrug({
       ...product,
       [event.target.name]: event.target.value,
     });
