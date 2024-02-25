@@ -1,5 +1,5 @@
 import React from "react";
-import { IProduct } from "../../types/global.typing";
+import { IDrugs } from "../../types/global.typing";
 import "./edit-product.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
@@ -7,7 +7,7 @@ import axios from "axios";
 import { baseUrl } from "../../constants/url.constant";
 
 const EditProduct: React.FC = () => {
-  const [product, setProduct] = React.useState<Partial<IProduct>>({
+  const [product, setProduct] = React.useState<Partial<IDrugs>>({
     Name: "",
     Drugs: "",
   });
@@ -23,7 +23,7 @@ const EditProduct: React.FC = () => {
   };
 
   React.useEffect(() => {
-    axios.get<IProduct>(`${baseUrl}/${id}`).then((response) =>
+    axios.get<I>(`${baseUrl}/${id}`).then((response) =>
       setProduct({
         Name: response.data.Name,
         Drugs: response.data.Drugs,
