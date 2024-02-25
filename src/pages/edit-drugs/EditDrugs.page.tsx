@@ -23,7 +23,7 @@ const EditProduct: React.FC = () => {
   };
 
   React.useEffect(() => {
-    axios.get<I>(`${baseUrl}/${id}`).then((response) =>
+    axios.get<IDrugs>(`${baseUrl}/${id}`).then((response) =>
       setProduct({
         Name: response.data.Name,
         Drugs: response.data.Drugs,
