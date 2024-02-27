@@ -36,7 +36,7 @@ const EditProduct: React.FC = () => {
       alert("Enter Values");
       return;
     }
-    const data: Partial<IProduct> = {
+    const data: Partial<IDrugs> = {
       Drugs: product.Drugs,
       Name: product.Name,
     };
