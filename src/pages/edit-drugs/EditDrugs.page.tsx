@@ -7,7 +7,7 @@ import axios from "axios";
 import { baseUrl } from "../../constants/url.constant";
 
 const EditProduct: React.FC = () => {
-  const [drug, setDrugs] = React.useState<Partial<IDrugs>>({
+  const [drugs, setDrugs] = React.useState<Partial<IDrugs>>({
     Name: "",
     Drugs: "",
   });
