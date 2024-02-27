@@ -56,13 +56,13 @@ const EditProduct: React.FC = () => {
 
   return (
     <div className="edit-product">
-      <h2>Edit Product</h2>
+      <h2>Edit Drugs</h2>
       <TextField
         autoComplete="off"
         label="Drugs"
         variant="outlined"
         name="brand"
-        value={product.Drugs}
+        value={drugs.Drugs}
         onChange={changeHandler}
       />
       <TextField
