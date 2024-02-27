@@ -37,8 +37,8 @@ const EditProduct: React.FC = () => {
       return;
     }
     const data: Partial<IDrugs> = {
-      Drugs: drugs.Drugs,
-      Name: drugs.Name,
+      Drugs: drug.Drugs,
+      Name: drug.Name,
     };
     axios
       .put(`${baseUrl}/${id}`, data)
