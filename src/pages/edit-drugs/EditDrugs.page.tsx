@@ -62,7 +62,7 @@ const EditProduct: React.FC = () => {
         label="Drugs"
         variant="outlined"
         name="brand"
-        value={drugs.Drugs}
+        value={drug.Drugs}
         onChange={changeHandler}
       />
       <TextField
@@ -70,7 +70,7 @@ const EditProduct: React.FC = () => {
         label="Name"
         variant="outlined"
         name="title"
-        value={product.Name}
+        value={drug.Name}
         onChange={changeHandler}
       />
       <div>
