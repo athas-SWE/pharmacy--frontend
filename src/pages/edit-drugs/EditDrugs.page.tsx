@@ -7,7 +7,7 @@ import axios from "axios";
 import { baseUrl } from "../../constants/url.constant";
 
 const EditProduct: React.FC = () => {
-  const [product, setProduct] = React.useState<Partial<IDrugs>>({
+  const [drug, setDrugs] = React.useState<Partial<IDrugs>>({
     Name: "",
     Drugs: "",
   });
@@ -16,8 +16,8 @@ const EditProduct: React.FC = () => {
   const { id } = useParams();
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setDrug({
-      ...product,
+    setDrugs({
+      ...drugs,
       [event.target.name]: event.target.value,
     });
   };
