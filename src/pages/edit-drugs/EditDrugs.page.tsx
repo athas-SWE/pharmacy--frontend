@@ -32,7 +32,7 @@ const EditProduct: React.FC = () => {
   }, []);
 
   const handleSaveBtnClick = () => {
-    if (product.Name === "" || product.Drugs === "") {
+    if (drugs.Name === "" || drugs.Drugs === "") {
       alert("Enter Values");
       return;
     }
