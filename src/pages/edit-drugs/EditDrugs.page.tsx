@@ -24,7 +24,7 @@ const EditProduct: React.FC = () => {
 
   React.useEffect(() => {
     axios.get<IDrugs>(`${baseUrl}/${id}`).then((response) =>
-      setProduct({
+      setDrugs({
         Name: response.data.Name,
         Drugs: response.data.Drugs,
       })
