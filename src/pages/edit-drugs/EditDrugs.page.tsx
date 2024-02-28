@@ -29,7 +29,7 @@ const EditProduct: React.FC = () => {
         Drugs: response.data.Drugs,
       })
     );
-  }, []);
+  });
 
   const handleSaveBtnClick = () => {
     if (drugs.Name === "" || drugs.Drugs === "") {
@@ -62,7 +62,7 @@ const EditProduct: React.FC = () => {
         label="Drugs"
         variant="outlined"
         name="brand"
-        value={drug.Drugs}
+        value={drugs.Drugs}
         onChange={changeHandler}
       />
       <TextField
