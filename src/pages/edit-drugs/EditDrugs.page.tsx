@@ -70,7 +70,7 @@ const EditProduct: React.FC = () => {
         label="Name"
         variant="outlined"
         name="title"
-        value={drug.Name}
+        value={drugs.Name}
         onChange={changeHandler}
       />
       <div>
