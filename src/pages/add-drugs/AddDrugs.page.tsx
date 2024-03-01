@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../../constants/url.constant";
 
 const AddProduct: React.FC = () => {
-  const [product, setProduct] = React.useState<Partial<IProduct>>({
+  const [product, setProduct] = React.useState<Partial<IDrug>>({
     Name: "",
     Drugs: "",
   });
