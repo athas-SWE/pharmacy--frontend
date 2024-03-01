@@ -13,7 +13,7 @@ const Home = () => {
         color="primary"
         onClick={() => redirect("/products")}
       >
-        Products List
+        Medical Drugs List
       </Button>
       <img src={kitten} alt="kitten" />
     </div>
