@@ -7,7 +7,7 @@ const Home = () => {
   const redirect = useNavigate();
   return (
     <div className="home">
-      <h1>Welcome to Medical Store </h1>
+      <h1>Welcome to Medical Product Store </h1>
       <Button
         variant="outlined"
         color="primary"
