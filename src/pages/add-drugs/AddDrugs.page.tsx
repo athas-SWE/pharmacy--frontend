@@ -26,7 +26,7 @@ const AddProduct: React.FC = () => {
       return;
     }
 
-    const data: Partial<IProduct> = {
+    const data: Partial<IDrug> = {
       Drugs: product.Drugs,
       Name: product.Name,
     };
