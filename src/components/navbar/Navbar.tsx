@@ -12,11 +12,11 @@ const Navbar: React.FC = () => {
     }
   };
 
-  const menuStyle = open ? "menu open" : "menu";
+  const menuStyle = open ? "menu open" : "msenu";
 
   return (
     <div className="navbar">
-      <div className="brand">Pharmacy</div>
+      <div className="brand">Medical</div>
       <div className="hamburger">
         <Menu onClick={toggleNavBar} />
       </div>
