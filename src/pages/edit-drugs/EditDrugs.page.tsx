@@ -82,7 +82,7 @@ const EditProduct: React.FC = () => {
           color="secondary"
           onClick={handleBackBtnClick}
         >
-          Back
+          Back up
         </Button>
       </div>
     </div>
