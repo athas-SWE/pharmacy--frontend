@@ -1,7 +1,7 @@
 import React from "react";
 import "./add-product.scss";
 import { TextField, Button } from "@mui/material";
-import { IDrug } from "../../types/global.typing";
+import { IDrugs } from "../../types/global.typing";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../../constants/url.constant";
