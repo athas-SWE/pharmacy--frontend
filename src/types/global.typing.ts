@@ -1,4 +1,4 @@
-export interface IDrug {
+export interface IDrugs {
   id: string;
   Drugs: string;
   Name: string;
