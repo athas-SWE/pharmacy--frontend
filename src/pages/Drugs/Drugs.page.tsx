@@ -48,7 +48,7 @@ const Drugs: React.FC = () => {
 
   return (
     <div className="products">
-      <h1>Drugs List</h1>
+      <h1>Medical Drugs List</h1>
       {drugs.length === 0 ? (
         <h1>No Drugs</h1>
       ) : (
